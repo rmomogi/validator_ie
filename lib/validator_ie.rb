@@ -29,6 +29,8 @@ require "validator_ie/core/state_to"
 
 module ValidatorIE
 
+  @state = nil
+
   def self.valid?(number,state)
     name = "State#{state.upcase}"
     begin
@@ -36,7 +38,16 @@ module ValidatorIE
     rescue
       raise "Nome do estado não existente!"   
     end
-    return target.send("new", {:number => number}).send('valid?')
+    @state = target.send("new", {:number => number})
+    return @state.send('valid?')
+  end
+
+  def self.errors 
+    unless @state.nil?
+      return @state.errors
+    else
+      return []
+    end 
   end
 
 end
