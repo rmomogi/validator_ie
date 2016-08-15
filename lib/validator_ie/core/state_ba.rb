@@ -23,7 +23,7 @@ module ValidatorIE
       end
 
       return if result
-      errors.add(:number, 'não é válido a inscrição estadual.')
+      errors.add(:number, 'não é válido para inscrição estadual.')
     end
 
     private 

@@ -17,7 +17,7 @@ module ValidatorIE
       digit1 = number_should_modX(11, 6)
       digit2 = number_should_modX(11, 7)
       return if digit1 && digit2
-      errors.add(:number, 'não é válido a inscrição estadual.')
+      errors.add(:number, 'não é válido para inscrição estadual.')
     end
 
     private 

@@ -19,7 +19,7 @@ module ValidatorIE
       self.number = number.split(//).map.with_index {|m, k| m unless k == 2 || k == 3}.compact!.join('')
       result = number_should_modX(11, 7)
       return if result
-      errors.add(:number, 'não é válido a inscrição estadual.')
+      errors.add(:number, 'não é válido para inscrição estadual.')
     end
 
     private 
