@@ -19,12 +19,12 @@ Or install it yourself as:
     $ gem install validator_ie
 
 ## Usage
-    ```ruby
-    result = ValidatorIE::valid?('XXXXXXXXXXXX','AC') # Only numbers
-    unless result
-        puts result.errors.full_messages
-    end
-    ```
+```ruby
+result = ValidatorIE::valid?('XXXXXXXXXXXX','AC') # Only numbers
+unless result
+puts result.errors.full_messages
+end
+```
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
