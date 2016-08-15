@@ -9,7 +9,6 @@ describe ValidatorIE do
 
     it 'do not should to validate IE from state Acre' do
       expect(ValidatorIE::valid?('9100482300112','AC')).to eq(false)
-      puts ValidatorIE::errors
     end
 
     it 'do not should to validate IE from state Acre with too short' do
