@@ -22,7 +22,7 @@ Or install it yourself as:
 ```ruby
 result = ValidatorIE::valid?('XXXXXXXXXXXX','AC') # Only numbers
 unless result
-  puts result.errors.full_messages
+  puts ValidatorIE::errors.full_messages
 end
 ```
 ## Development
